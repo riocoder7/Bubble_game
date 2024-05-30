@@ -1,165 +1,177 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+ *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
 
-html,body{
-   
-    width: 100%;
-    height: 100%;
-    
-}
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
 
-#main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(120, 146, 120);
-}
+    #navbar{
+        width: 100%;
+        background-color: rgb(15, 37, 15);
+        color: white;
+        padding: 10px 40px;
+        
+        
+    }
 
-#penal{
-    overflow: hidden;
-    width: 80%;
-    height: 80%;
-    background-color: rgb(112, 170, 112);
-    border-radius: 10px;
-    
+    #navbar a{
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        transition: background-color 0.3s;
+    }
 
+    #navbar a:hover{
+        background-color: rgb(33, 69, 33);
+    }
 
-}
-#maintop{
-    justify-content: space-between;
-    padding: 0px 30%;
-    display: flex;
-    align-items: center;
-    color: white;
-    width: 100%;
-    height: 100px;
-    background-color: rgb(15, 37, 15);
-}
-.elem{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    
-   
-}
+    #footer{
+        width: 100%;
+        background-color: rgb(15, 37, 15);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+    }
 
-.box{
-    color: black;
-    font-weight: 700;
-    font-size: 25px;
-    padding: 10px 20px;
-    background-color: white;
-    border-radius: 5px;
-    
-
-}
-#mainbubble{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px;
-    width: 100%;
-    height: calc(100% - 100px);
-    background-color: white;
-    scroll-behavior: auto;
-
-}
-.bubble{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    background-color: rgb(19, 79, 19);
-    color: white;
-    border-radius: 50%;
-    font-weight: 500;
-
-}
-.bubble:hover{
-    cursor: pointer;
-    background-color: rgb(33, 69, 33);
-}
-/* 
-#score_data{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top:15% ;
-    width: 30%;
-    height: 20%;
-    background-color: red;
-
-
-} */
-
-@media (min-width:250px) and (max-width:300px){
-    #maintop{
-              padding: 0px 10px;
-              justify-content: space-around;
-
-            
+    #main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: calc(100% - 70px); /* Adjust for footer height */
+        background-color: rgb(120, 146, 120);
     }
 
     #penal{
-        width: 95%;
+        overflow: hidden;
+        width: 80%;
+        height: 80%;
+        background-color: rgb(112, 170, 112);
+        border-radius: 10px;
+    }
 
+    #maintop{
+        justify-content: space-between;
+        padding: 0px 30%;
+        display: flex;
+        align-items: center;
+        color: white;
+        width: 100%;
+        height: 100px;
+        background-color: rgb(15, 37, 15);
     }
 
     .elem{
-        align-items: normal;
-        gap: 5px;
-
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 
     .box{
-        font-weight: 100;
-    font-size: 18px;
-    padding: 5px 5px;
-
-    }
-    h2{
-        font-size: small;
-    }
-
-
-    
-}
-
-@media (min-width:300px) and (max-width:600px){
-    #maintop{
-              padding: 0px 10px;
-              justify-content: space-around;
-
-            
-    }
-    #penal{
-        width: 95%;
-
+        color: black;
+        font-weight: 700;
+        font-size: 25px;
+        padding: 10px 20px;
+        background-color: white;
+        border-radius: 5px;
     }
 
-    
-}
-
-@media (min-width:600px) and (max-width:800px){
-    #maintop{
-              padding: 0px 10px;
-              justify-content: space-around;
-
-            
+    #mainbubble{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px;
+        width: 100%;
+        height: calc(100% - 100px);
+        background-color: white;
+        scroll-behavior: auto;
     }
 
-    #penal{
-        width: 95%;
-
+    .bubble{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background-color: rgb(19, 79, 19);
+        color: white;
+        border-radius: 50%;
+        font-weight: 500;
     }
 
-    
-}
+    .bubble:hover{
+        cursor: pointer;
+        background-color: rgb(33, 69, 33);
+    }
+
+    @media (max-width: 800px){
+        #maintop{
+            padding: 0px 10px;
+            justify-content: space-around;
+        }
+
+        #penal{
+            width: 95%;
+        }
+    }
+
+    @media (max-width: 600px){
+        #maintop{
+            padding: 0px 10px;
+            justify-content: space-around;
+        }
+
+        #penal{
+            width: 95%;
+        }
+
+        .elem{
+            font-size: small;
+        }
+
+        #mainbubble{
+            overflow-y: scroll;
+        }
+    }
+
+    @media (max-width: 300px){
+        #maintop{
+            padding: 0px 10px;
+            justify-content: space-around;
+            font-size: 20px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+
+        }
+
+        #penal{
+            width: 95%;
+        }
+
+        .elem{
+            align-items: normal;
+            gap: 5px;
+        }
+
+        .presshit{
+            width: 15px;
+            height: 15px;
+        }
+    #mainbubble{
+        width: 10px;
+        height: 10px;
+    }
+        h2{
+            font-size: small;
+        }
+    }
